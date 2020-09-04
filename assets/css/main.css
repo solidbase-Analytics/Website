@@ -1,0 +1,81 @@
+.blue5blue {
+  color: #0a256a !important;
+}
+
+.btn-blue5blue {
+  color: rgb(10,34,96);
+  border-color: rgb(10,34,96);
+}
+
+.btn-blue5blue:hover {
+  background-color: rgb(10,34,96);
+  color: white;
+}
+
+.transparent {
+  background: rgba(0,0,0,0.8);
+}
+
+.nav-visible {
+  top: 0;
+  transition: top 0.5s;
+}
+
+.nav-hidden {
+  top: -100px;
+}
+
+#landing-flex-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  color: white;
+  z-index: 2;
+}
+
+@media (min-width: 300px) {
+  #zitat {
+    /*width: 100%;*/
+    /*align-self: flex-end;*/
+    /*margin: 0px 50px 5px 40px;*/
+    /*margin-left: 0;*/
+    padding: 0rem 1.5rem;
+    /*align-self: center;*/
+  }
+}
+
+#sec-home {
+  color: rgba(0,0,0,0.6);
+  height: 100vh;
+  background: url(../../assets/img/backgrounds/self_made_whiteboard.jpeg?h=76210c7b01cf961fd303a8ef79cd1fda) no-repeat;
+  background-size: cover;
+}
+
+.about-us-list {
+  font-size: 0.85rem;
+  text-align: start;
+}
+
+#sec-info {
+  height: 100vh;
+}
+
+.next-sec-button {
+  width: 150px;
+}
+
+.person-card {
+  margin: 1rem auto;
+  max-width: 260px;
+}
+
+.navbar-logo {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 72px;
+}
+
