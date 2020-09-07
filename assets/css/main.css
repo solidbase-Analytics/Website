@@ -50,7 +50,7 @@
 #sec-home {
   color: rgba(0,0,0,0.6);
   height: 100vh;
-  background: url(../../assets/img/backgrounds/self_made_whiteboard.jpeg?h=76210c7b01cf961fd303a8ef79cd1fda) no-repeat;
+  background: url(../../assets/img/backgrounds/self_made_whiteboard.jpeg) no-repeat;
   background-size: cover;
 }
 
