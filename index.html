@@ -22,16 +22,17 @@
     <main class="page landing-page">
         <div id="navbar-overlay"></div>
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top clean-navbar transparent nav-visible" id="navbar">
-            <div class="container"><img class="navbar-logo" src="assets/img/Logo/petrol_capital_non_capital.png"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
+            <div class="container"><img class="navbar-logo" src="assets/img/Logo/petrol_capital_non_capital.png" onclick="location.href=&quot;index.html&quot;"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link active btn" id="nav-home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active btn" id="nav-services">Leistungen</a></li>
-                        <li class="nav-item"><a class="nav-link active btn" id="nav-about-us">über Uns</a></li>
-                        <li class="nav-item"><a class="nav-link active btn" id="nav-contact">Kontakt</a></li>
+                        <li class="nav-item"><a class="nav-link active btn" id="nav-home" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link btn" id="nav-services" href="features.html">Leistungen</a></li>
+                        <li class="nav-item"><a class="nav-link btn" id="nav-about-us" href="about_us.html">über Uns</a></li>
+                        <li class="nav-item"><a class="nav-link btn" id="nav-use-cases" href="use_cases.html">USE CASES</a></li>
+                        <li class="nav-item"><a class="nav-link btn" id="nav-contact" href="contact.html">Kontakt</a></li>
                     </ul>
-                </div>
+            </div>
             </div>
         </nav>
         <section id="sec-home" class="clean-block clean-hero">
@@ -84,7 +85,7 @@
                     <hr id="divider" class="w-100">
                     <div class="col-md-5 feature-box"><i class="icon-question icon blue5blue"></i>
                         <h4>Ihr Problem war nicht dabei?</h4>
-                        <p>Nehmen Sie Kontakt auf und wir sehen, wie wir Ihnen helfen können</p><button class="btn btn-lg btn-blue5blue mt-2" type="button">Kontakt aufnehmen</button></div>
+                        <p>Nehmen Sie Kontakt auf und wir sehen, wie wir Ihnen helfen können</p><button class="btn btn-lg btn-blue5blue mt-2" type="button" onclick="location.href=&quot;contact.html&quot;">Kontakt aufnehmen</button></div>
                 </div>
                 <!-- Start: #use-cases -->
                 <div id="use-cases" class="block-heading">
@@ -153,8 +154,7 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info blue5blue">Kontakt</h2>
-                    <p>We are passionate about Mathematics and Computer Science and how they can be used to optimise processes.</p>
-                </div>
+                    <p>Treten Sie mit uns in Kontakt.&nbsp;</p><button class="btn btn-lg btn-blue5blue mt-2" type="button" onclick="location.href=&quot;contact.html&quot;">Kontakt aufnehmen</button></div>
             </div>
         </section>
     </main>

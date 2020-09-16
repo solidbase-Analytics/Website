@@ -51,16 +51,3 @@ btnUseCases.onclick = scrollToId.bind(this, 'use-cases');
 
 let btnOurServices = document.getElementById('btnOurServices');
 btnOurServices.onclick = scrollToId.bind(this, 'sec-services');
-
-// Define NavbarItem behaviour -> scrolling to the corresponding section
-// The requirement for the following code to work is that
-//      -> navbarItemsId: 'nav-' + navbarItem
-//      -> corresponding sectionId: 'sec-' + navbarItem
-const navbarItems = ['home', 'services', 'about-us', 'contact']
-for (let id of navbarItems) {
-    document.getElementById('nav-'+id).onclick = function() {
-        scrollToId('sec-' + id);
-        // Always hide the navbar as well as the navbar collapsible when jumped to a new section
-        $('#navcol-1').collapse('hide');
-    }
-}
