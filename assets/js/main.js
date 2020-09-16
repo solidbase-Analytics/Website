@@ -8,22 +8,13 @@ function scrollToId(idString) {
         top: target,
         behavior: 'smooth'
     });
-    // Check if scrolling reached the target and then make sure navbar is visible
-    //window.onscroll = null; // remove existing listener
-    window.onscroll = () => { 
-        let currentScrollOffset = window.pageYOffset || document.documentElement.scrollTop;
-        console.log(currentScrollOffset);
-        if (currentScrollOffset === target) { 
-            console.log('reached target');
-            navbar.classList.remove('nav-hidden');
-            window.onscroll = null; // remove listener
-            window.onscroll = scrollDisappear; // set back to normal listener 
-        }
+    // Don't remove navbar during automatic scrolling (pause scrollDisappear for 1sec)
+    window.onscroll = null; // remove existing listener
+    setTimeout(() => window.onscroll = scrollDisappear, 1000) ;
     }
-}
 
-window.onscroll = scrollDisappear; // set back to normal listener 
 // Make navbar automatically appear/disappear corresponding to scrolling
+window.onscroll = scrollDisappear; 
 function scrollDisappear() {
     // If the collapsible part of the navbar is visible the navbar shouldn't disappear
     if($('#navcol-1.collapse.show').length === 1 ) {
@@ -42,6 +33,12 @@ function scrollDisappear() {
     lastScrollY = window.scrollY; // save Y-scroll for future comparisions
 }
 
+// Display navbar when users hovers over very top part of visible page
+document.getElementById('navbar-overlay').onmouseover = () => {
+    navbar.classList.remove('nav-hidden');
+}
+
+//--------------------------------------------------
 // Buttons and their behaviour
 let learnMoreButton = document.getElementById('learnMoreBtn');
 learnMoreButton.onclick = function() {
