@@ -1,14 +1,14 @@
 .blue5blue {
-  color: #0a256a !important;
+  color: #006a60 !important;
 }
 
 .btn-blue5blue {
-  color: rgb(10,34,96);
-  border-color: rgb(10,34,96);
+  color: #006a60;
+  border-color: #006a60;
 }
 
 .btn-blue5blue:hover {
-  background-color: rgb(10,34,96);
+  background-color: #006a60;
   color: white;
 }
 
@@ -38,12 +38,7 @@
 
 @media (min-width: 300px) {
   #zitat {
-    /*width: 100%;*/
-    /*align-self: flex-end;*/
-    /*margin: 0px 50px 5px 40px;*/
-    /*margin-left: 0;*/
     padding: 0rem 1.5rem;
-    /*align-self: center;*/
   }
 }
 
@@ -69,7 +64,9 @@
 
 .person-card {
   margin: 1rem auto;
-  max-width: 260px;
+  max-width: 400px;
+  min-width: 300px;
+  margin: auto auto;
 }
 
 .navbar-logo {
@@ -77,12 +74,16 @@
   height: auto;
   max-width: 200px;
   max-height: 72px;
+  cursor: pointer;
+}
+
+.f-box:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .feature-box:hover {
+  transition: 0.5s;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /*text-shadow: text-shadow: 2px 2px 4px #000000;*/
-  /*text-shadow: 2px 2px 4px #b3b3b3;*/
 }
 
 #navbar-overlay {
@@ -90,5 +91,134 @@
   width: 100%;
   position: fixed;
   background-color: rgba(0,0,0,0);
+  z-index: 3;
+}
+
+/* f-box is a custom version of feature box using flexbox to align heading and items vertically centered */
+
+.f-box {
+  margin: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.f-box h4 {
+  margin-bottom: 0;
+}
+
+.f-box h4 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 1.5rem;
+}
+
+.f-box .icon {
+  font-size: 30px;
+}
+
+.feature-box ul {
+  font-size: .9em;
+  opacity: .8;
+}
+
+.feature-list {
+  font-size: .9em;
+  opacity: .8;
+  margin-left: -35px;
+}
+
+.feature-box {
+  padding: 15px 20px 15px 70px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+html {
+  scroll-padding-top: 110px;
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#info-paragraph {
+  font-size: 1.1rem;
+}
+
+.info-paragraph {
+  padding-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.info-paragraph p {
+  opacity: 0.7;
+  max-width: 600px;
+  margin: auto;
+}
+
+.person-col {
+  padding: 1em 1em;
+  align-items: stretch;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  justify-self: stretch;
+}
+
+#contact-illustration {
+  width: 40%;
+}
+
+#carousel-1 {
+  max-width: 700px;
+  margin: auto auto;
+}
+
+#learnMoreBtn:hover {
+  background-color: #006a60;
+  color: #fff;
+}
+
+.h6, h6 {
+  font-size: 1.1rem;
+}
+
+.feature-box p {
+  font-size: 0.93em;
+  opacity: .8;
+}
+
+.cust-feat-box {
+  padding-bottom: 40px;
+  padding: 25px 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.075);
+  margin-top: 20px;
+}
+
+.cust-feat-box p, ul {
+  opacity: 0.8;
+}
+
+.cust-feat-box h4 {
+  width: 50%;
+  margin-left: 10px;
+  margin: auto 15px;
+}
+
+.icon-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cust-feat-box i {
+  font-size: 30px;
 }
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
     <link rel="stylesheet" href="assets/css/bs_additions.css">
@@ -21,9 +22,9 @@
 <body>
     <main class="page landing-page">
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top clean-navbar transparent nav-visible" id="navbar">
-            <div class="container"><img class="navbar-logo" src="assets/img/Logo/petrol_capital_non_capital.png"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
+            <div class="container"><img class="navbar-logo" src="assets/img/Logo/petrol_capital_non_capital.png" onclick="location.href=&#39;index.html&#39;"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link btn" id="nav-home" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link active btn" id="nav-services" href="features.html">Leistungen</a></li>
@@ -31,43 +32,81 @@
                         <li class="nav-item"><a class="nav-link btn" id="nav-use-cases" href="use_cases.html">USE CASES</a></li>
                         <li class="nav-item"><a class="nav-link btn" id="nav-contact" href="contact.html">Kontakt</a></li>
                     </ul>
-                </div>
+            </div>
             </div>
         </nav>
         <section id="sec-services" class="clean-block">
             <div class="container">
                 <div class="block-heading mt-5">
                     <h2 class="text-info blue5blue">Leistungen</h2>
-                    <h4>Kompetenzen</h4>
-                    <p>Wir bieten folgende Leistungen an:</p>
+                    <p>Im Folgenden sind beschreiben wir unsere Leistungen und geben jeweils ein paar Anwendungsbeispiele</p>
                 </div>
-                <div class="row justify-content-start mx-2">
-                    <div class="col-md-8 feature-box"><i class="material-icons icon blue5blue">perm_data_setting</i>
-                        <h4>Statistische Analyse von Daten aller Art</h4>
-                        <p></p>
-                        <p>z. B. Verkaufsdaten von Kaffeespezialitäten innerhalb eines Unternehmens (inkl. Automaten, Café, etc.)</p>
+                <div class="flex-column">
+                    <div id="feat-stats" class="flex-column position-relative cust-feat-box">
+                        <div class="icon-heading"><i class="fa fa-pie-chart icon blue5blue"></i>
+                            <h4><strong>Statistische Analyse</strong></h4>
+                        </div>
+                        <p>Sie haben Daten, aber wissen nicht genau, wie diese genutzt werden können? Wir analysieren Daten aller Art und werten sie nach den aktuellen Standards der mathematischen Forschung aus. Die Ergebnisse der Analyse bereiten wir graphisch
+                            und kontextuell auf, sodass sie direkt weiterverwendet werden können.</p>
+                        <h6>Beispiele für Daten, die wir analysieren<br></h6>
+                        <ul>
+                            <li>Belegung von Konferenzräumen<br></li>
+                            <li>Konsumverhalten von Kunden<br></li>
+                            <li>Menge verkaufter Kaffeespzialitäten im Unternehmen</li>
+                        </ul>
                     </div>
                     <div id="diver" class="w-100"></div>
-                    <div class="col-md-8 feature-box"><i class="material-icons icon blue5blue">trending_up</i>
-                        <h4>Optimierung veränderbarer Parameter</h4>
-                        <p>Anzahl benötigter Kaffeemaschinen und Mengen der benötigten Lebensmittel</p>
-                        <p></p>
+                    <div id="feat-optimise" class="cust-feat-box position-relative">
+                        <div class="icon-heading"><i class="material-icons icon blue5blue">trending_up</i>
+                            <h4><strong>Optimierung von Parametern</strong><br></h4>
+                        </div>
+                        <p>In einer Zeit, in der Gewinnmargen kleiner werden, versucht man durch kleine Veränderungen an jeder Stelle Verbesserungen zu erzielen. Um dabei zu unterstützen,&nbsp;nutzen wir neuste&nbsp;mathematische Methoden, um veränderbare
+                            Parameter in einem Problem zu optimieren. Dadurch entstehen Lösungen, die alle verfügbaren Ressourcen bestmöglich ausschöpfen.</p>
+                        <h6>Beispiele für Parameter, die wir optimieren<br></h6>
+                        <ul>
+                            <li>Menge benötigter Lebensmittel in einem Mitarbeiterrestaurant<br></li>
+                            <li>Anzahl benötigter&nbsp;Maschinen in einem Produktionsprozess<br></li>
+                            <li>Routenplanung einer Auslieferung</li>
+                        </ul>
                     </div>
                     <div id="diver-1" class="w-100"></div>
-                    <div class="col-md-8 feature-box"><i class="icon-organization icon blue5blue"></i>
-                        <h4>Mathematische Auswertung zur Überprüfung von Vermutungen</h4>
-                        <p>z. B. Vergleichen von Kosten bei der Nutzung verschiedener Reiseportale</p>
+                    <div id="feat-decide" class="cust-feat-box position-relative">
+                        <div class="icon-heading"><i class="material-icons icon blue5blue">call_split</i>
+                            <h4><strong>Mathematische Entscheidungshilfe</strong><br></h4>
+                        </div>
+                        <p>Wir treffen viele Entscheidungen aufgrund von Erfahrungen. Hierbei&nbsp;nutzt unser Gehirn Daten aus der Vergangenheit, um eine möglichst gute Antwort auf eine Frage zu finden. Doch unser Gehirn ist niemals unvoreingenommen. Wir
+                            erstellen individualisierte&nbsp;mathematische&nbsp;Modelle, die&nbsp;Probleme objektifizieren. Anschließend werten wir die Modelle&nbsp;aus, sodass Empfehlungen zur Entscheidungsfindung gegeben werden können.&nbsp;Auf diese
+                            Weise helfen wir dabei, Vermutungen zu überprüfen und Entscheidungen transparenter darzustellen.</p>
+                        <h6>Beispiele für Probleme, bei denen wir&nbsp;Entscheidungshilfen geben<br></h6>
+                        <ul>
+                            <li>Vergleich der Kosten bei der Nutzung&nbsp;verschiedener Reiseportale<br></li>
+                            <li>Öffnungszeiten eines Mitarbeiterrestaurants<br></li>
+                            <li>benötigte&nbsp;Bürofläche für ein Unternehmen</li>
+                        </ul>
                     </div>
                     <div id="diver-2" class="w-100"></div>
-                    <div class="col-md-8 feature-box"><i class="material-icons icon blue5blue">important_devices</i>
-                        <h4>mathematische Modellierung von Prozessen und Bereitstellung entsprechender Simulationen</h4>
-                        <p>z. B. Nutzung der Fahrstühle in einem Gebäude</p>
+                    <div id="feat-model" class="cust-feat-box position-relative">
+                        <div class="icon-heading"><i class="fa fa-sitemap icon blue5blue"></i>
+                            <h4><strong>Mathematische Modellierung und Simulation von Prozessen</strong></h4>
+                        </div>
+                        <p>Es gibt Probleme, die so komplex sind, dass&nbsp;keine optimale Lösung im ursprünglichen Sinne existiert. Häufig liegt dies daran, dass&nbsp;Einflussfaktoren von&nbsp;Zufall geprägt sind. Für solche Probleme bieten sich stochastische&nbsp;(auf
+                            Wahrscheinlichkeitsrechnung beruhend) Modelle&nbsp;an, die Zufallsfaktoren miteinbeziehen. Das Ergebnis ist Abbild der Realität, das nun durch verschiedene Simulationen analysiert werden kann. Entsprechende Simulationen können
+                            bei Bedarf von uns auch visualisiert werden.</p>
+                        <h6>Beispiele für Prozesse, die wir&nbsp;modellieren</h6>
+                        <ul>
+                            <li>Entwicklung&nbsp;von Warteschlangen jeglicher Art<br></li>
+                            <li>Nutzung der&nbsp;Fahrstühle&nbsp;in einem Gebäude<br></li>
+                            <li>Entwicklung von Corona-Krankheitszahlen</li>
+                        </ul>
                     </div>
                     <div id="diver-3" class="w-100"></div>
                     <hr id="divider" class="w-100">
-                    <div class="col-md-8 feature-box"><i class="icon-question icon blue5blue"></i>
-                        <h4>Ihr Problem war nicht dabei?</h4>
-                        <p>Nehmen Sie Kontakt auf und wir sehen, wie wir Ihnen helfen können</p><button class="btn btn-lg btn-blue5blue mt-2" type="button">Kontakt aufnehmen</button></div>
+                    <div class="cust-feat-box position-relative">
+                        <div class="icon-heading"><i class="icon-question icon blue5blue"></i>
+                            <h4>Ihr Problem war nicht dabei?</h4>
+                        </div>
+                        <p>Unsere große Leidenschaft ist es neue Methoden zu finden,&nbsp;die Mathematik zur Lösung komplexer Probleme&nbsp;benutzen.<br>Schildern Sie uns gerne Ihre Situation und wir erarbeiten gemeinsam Möglichkeiten, wie Sie sich die Mathematik
+                            zu Nutzen machen können.</p><button class="btn btn-lg btn-blue5blue mt-2" type="button" onclick="location.href=&#39;contact.html&#39;">Kontakt aufnehmen</button></div>
                 </div>
             </div>
         </section>
