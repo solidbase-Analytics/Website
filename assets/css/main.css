@@ -222,3 +222,41 @@ html, body {
   font-size: 30px;
 }
 
+.slide-overlay {
+  background-color: rgba(109,181,174,0.7);
+  z-index: 2;
+  height: 50px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .slide-overlay {
+    height: 70px;
+  }
+}
+
+.carousel-indicators {
+  top: 0;
+  bottom: initial;
+}
+
+@media (min-width: 768px) {
+  .slide-overlay h4 {
+    font-size: 1.5rem!important;
+  }
+}
+
+.slide-overlay h4 {
+  font-size: 1.2rem;
+}
+
+#contact-btn:hover {
+  color: white;
+}
+
