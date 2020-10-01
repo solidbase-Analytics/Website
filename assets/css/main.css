@@ -255,7 +255,60 @@ html, body {
   font-size: 1.2rem;
 }
 
+#contact-btn {
+  padding-left: 70px;
+  text-align: left;
+}
+
 #contact-btn:hover {
   color: white;
+}
+
+.contact-icon {
+  font-size: 3rem;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+/* The following definitions are just copied from bootstraps css - only adjustment is that the media-queries were removed to have the same footer design for all sizes */
+
+.page-footer ul li {
+  position: relative;
+  padding-left: 10px;
+}
+
+.page-footer ul li:after, .page-footer ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #007bff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.page-footer ul li:before {
+  top: 9px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.page-footer ul li:after {
+  top: 13px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.page-footer {
+  text-align: left;
+}
+
+/* Part of the footer holding all the links */
+
+.footer-column {
+  min-width: 300px;
 }
 
