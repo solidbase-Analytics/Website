@@ -312,3 +312,12 @@ html, body {
   min-width: 300px;
 }
 
+.person-img-div {
+  padding: 20px 20px 0px 20px;
+}
+
+.person-card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
