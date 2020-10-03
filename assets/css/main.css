@@ -54,8 +54,19 @@
   text-align: start;
 }
 
+#sec-about-us {
+  background-image: url(../../assets/img/backgrounds/bg_oct.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100%;
+}
+
 #sec-info {
   height: 100vh;
+  background-image: url(../../assets/img/backgrounds/bg_dod.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100%;
 }
 
 .next-sec-button {
@@ -133,6 +144,8 @@
   padding: 15px 20px 15px 70px;
   margin: 15px;
   cursor: pointer;
+  background-color: rgba(166,225,250,0.2);
+  border-radius: 0.5em;
 }
 
 html {
@@ -319,5 +332,20 @@ html, body {
 .person-card img {
   max-width: 100%;
   max-height: 100%;
+}
+
+#use-cases {
+  background: url("../../assets/img/backgrounds/bg_iso.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100%;
+  background-color: #f6f6f6;
+}
+
+#sec-services {
+  background: url("../../assets/img/backgrounds/bg_tetra.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
 }
 
