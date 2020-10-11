@@ -454,13 +454,6 @@ html, body {
   min-width: 400px;
 }
 
-@media (max-width: 991px) {
-  em::before {
-    content: '\A';
-    white-space: pre;
-  }
-}
-
 /* Taken from https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
 
 .dont-break-out {
