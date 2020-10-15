@@ -260,7 +260,7 @@ html, body {
   justify-content: center;
 }
 
-.cust-feat-box p, ul {
+.cust-feat-box p, .usecase-box p {
   opacity: 0.8;
 }
 
@@ -428,6 +428,13 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .usecase-box-left {
+    padding: 0 5px;
+  }
 }
 
 .usecase-component-left {
@@ -487,6 +494,36 @@ html, body {
     background: url("../../assets/img/backgrounds/long_page.png");
     background-size: 100%;
     background-repeat: no-repeat;
+  }
+}
+
+.usecase-box ul, .usecase-box ol {
+  opacity: 0.8;
+  padding-left: 25px;
+}
+
+#heading_and_btn {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+  .info-paragraph h4 {
+    font-size: 1.8rem;
+  }
+}
+
+.usecase-box-right {
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .usecase-box-right {
+    padding: 0 5px;
   }
 }
 
