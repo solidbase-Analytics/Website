@@ -16,3 +16,12 @@
   }
 }
 
+#heading_and_btn {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  padding-bottom: 1rem;
+}
+
