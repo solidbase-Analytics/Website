@@ -481,17 +481,17 @@ html, body {
   background-repeat: no-repeat;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
   .bg-long-page {
-    background: url("../../assets/img/backgrounds/long_page_xl.png");
-    background-size: 90%;
+    background: url("../../assets/img/backgrounds/long_page.png");
+    background-size: 100%;
     background-repeat: no-repeat;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
   .bg-long-page {
-    background: url("../../assets/img/backgrounds/long_page.png");
+    background: url("../../assets/img/backgrounds/long_page_xl.png");
     background-size: 100%;
     background-repeat: no-repeat;
   }
