@@ -472,7 +472,6 @@ html, body {
   background: url("../../assets/img/backgrounds/long_page_sm.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  min-height: 600px;
 }
 
 @media (min-width: 1400px) {
