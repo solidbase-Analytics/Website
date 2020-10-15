@@ -527,3 +527,10 @@ html, body {
   }
 }
 
+.slide-overlay:hover {
+  text-shadow: 2px 2px 15px #ffffff;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  background-color: rgba(109,181,174,0.9);
+}
+
