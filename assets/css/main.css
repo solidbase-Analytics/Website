@@ -438,8 +438,8 @@ html, body {
 }
 
 .usecase-component-left {
-  background: linear-gradient(180deg, rgba(166,225,250,0.2) 0%, #bfd3ee 100%);
   border-radius: 1em;
+  background-color: rgba(171,231,235,0.48);
   box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.1);
   padding: 1em;
   margin: 0.5em 0;
@@ -449,7 +449,7 @@ html, body {
   padding: 1em;
   margin: 0.5em 0;
   border-radius: 1em;
-  background: linear-gradient(180deg, rgba(166,225,250,0.2) 0%, #bfd3ee 100%);
+  background: rgba(171,231,235,0.48);
   box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.1);
 }
 
