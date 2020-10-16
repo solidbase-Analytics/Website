@@ -38,7 +38,7 @@
 
 @media (min-width: 300px) {
   #zitat {
-    padding: 0rem 1.5rem;
+    padding: 0rem 1.5rem 7.5rem 0rem;
   }
 }
 
@@ -532,5 +532,17 @@ html, body {
   cursor: pointer;
   transition: all 0.7s ease;
   background-color: rgba(109,181,174,0.9);
+}
+
+@media (min-width: 768px) {
+  #heading_and_btn h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #zitat h5 {
+    font-size: 1.5rem;
+  }
 }
 
