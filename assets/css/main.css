@@ -36,7 +36,7 @@
   z-index: 2;
 }
 
-@media (min-width: 300px) {
+@media (min-width: 768px) {
   #zitat {
     padding: 0rem 1.5rem 7.5rem 0rem;
   }
@@ -93,9 +93,12 @@
 
 .person-card {
   margin: 1rem auto;
-  max-width: 400px;
+  max-width: 500px;
   min-width: 300px;
   margin: auto auto;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 0.5em;
 }
 
 .navbar-logo {
@@ -162,7 +165,7 @@
   padding: 15px 20px 15px 70px;
   margin: 15px;
   cursor: pointer;
-  background-color: rgba(166,225,250,0.2);
+  background-color: rgba(171,231,235,0.48);
   border-radius: 0.5em;
 }
 
@@ -206,14 +209,11 @@ html, body {
 }
 
 .person-col {
-  padding: 1em 1em;
-  align-items: stretch;
+  padding: 1em 0.5em;
 }
 
-.card-body {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  justify-self: stretch;
+.clean-card .info, .person-img-div {
+  padding: 10px 20px;
 }
 
 #contact-illustration {
@@ -372,12 +372,15 @@ html, body {
 }
 
 .person-img-div {
-  padding: 20px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .person-card img {
   max-width: 100%;
   max-height: 100%;
+  width: 20%;
 }
 
 #use-cases {
@@ -544,5 +547,9 @@ html, body {
   #zitat h5 {
     font-size: 1.5rem;
   }
+}
+
+.social-meadia-icons i {
+  font-size: 1rem;
 }
 
