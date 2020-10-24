@@ -1,5 +1,5 @@
 const navbar = document.getElementById('navbar');
-let lastScrollY= window.scrollY; // as reference value to check if scrolling up or down
+let lastScrollY = window.scrollY; // as reference value to check if scrolling up or down
 
 // Lets you scroll to the part of the page where element with this id is located
 function scrollToId(idString) {
@@ -10,23 +10,23 @@ function scrollToId(idString) {
     });
     // Don't remove navbar during automatic scrolling (pause scrollDisappear for 1sec)
     window.onscroll = null; // remove existing listener
-    setTimeout(() => window.onscroll = scrollDisappear, 1000) ;
-    }
+    setTimeout(() => window.onscroll = scrollDisappear, 1000);
+}
 
 // Make navbar automatically appear/disappear corresponding to scrolling
-window.onscroll = scrollDisappear; 
+window.onscroll = scrollDisappear;
 function scrollDisappear() {
     // If the collapsible part of the navbar is visible the navbar shouldn't disappear
-    if($('#navcol-1.collapse.show').length === 1 ) {
+    if ($('#navcol-1.collapse.show').length === 1) {
         console.log('navcol');
         $('#navcol-1').collapse('hide');
     }
 
     // The navbar shouldn't disappear before the info-section has been reached
-    let offsetTop =document.querySelector('#sec-info').offsetTop;
-    if(window.scrollY > lastScrollY && window.scrollY >= offsetTop-100) {
+    let offsetTop = document.querySelector('#sec-info').offsetTop;
+    if (window.scrollY > lastScrollY && window.scrollY >= offsetTop - 100) {
         navbar.classList.add('nav-hidden');
-    } 
+    }
     else {
         navbar.classList.remove('nav-hidden');
     };
@@ -41,7 +41,7 @@ document.getElementById('navbar-overlay').onmouseover = () => {
 //--------------------------------------------------
 // Buttons and their behaviour
 let learnMoreButton = document.getElementById('learnMoreBtn');
-learnMoreButton.onclick = function() {
+learnMoreButton.onclick = function () {
     // Scroll to the info section by scrolling the corresponding offset
     scrollToId('sec-info');
 }
