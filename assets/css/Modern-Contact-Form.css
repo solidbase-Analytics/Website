@@ -9,22 +9,15 @@
 .form-control.input {
   border: 0;
   background: transparent;
-  border-bottom: 1px solid silver;
   border-radius: 0px !important;
+  padding: .375rem .75rem;
+  flex: 1;
 }
 
 .getintouch {
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-input[type="text"], input[type="email"], input[type="tel"], textarea {
-  border-radius: 0 !important;
-}
-
-input[type="text"], input[type="email"], input[type="tel"], textarea {
-  border-radius: 8px !important;
 }
 
 .btn-primary:hover {
@@ -48,9 +41,9 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
 
 .cust-textarea {
   resize: both;
-  min-height: 40px;
   line-height: 20px;
   transition: all 1s ease-out;
+  min-height: 20px;
 }
 
 .cust-textarea:focus {
@@ -62,6 +55,25 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
   .cust-textarea:focus {
     min-height: 200px !important;
     transition: all 1s ease-out;
+  }
+}
+
+label {
+  padding: .375rem .1rem .375rem .75rem;
+  display: inline-block;
+  margin-bottom: 0;
+  flex: 0 1 auto;
+}
+
+.form-group {
+  border-bottom: 1px solid silver;
+  display: flex;
+  align-items: baseline;
+}
+
+@media (max-width: 576px) {
+  .form-group {
+    flex-direction: column;
   }
 }
 
