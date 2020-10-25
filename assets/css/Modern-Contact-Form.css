@@ -68,7 +68,7 @@ label {
 .form-group {
   border-bottom: 1px solid silver;
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
 @media (max-width: 576px) {
