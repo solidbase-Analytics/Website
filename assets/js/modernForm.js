@@ -21,5 +21,37 @@ function calcHeight(value) {
   return newHeight;
 }
 
-// Execute once on page load in case the textarea already contains text 
-textarea.style.height = calcHeight(textarea.value) + 'px';
+// Very poor implementation but atm I don't have any other idea how 
+// to overwrite the kwes standard message when no text but only newlines or
+// spaces were added
+// This message would be "message muss ausgefüllt werden"
+//  -> where 'message' is a lowercase version of the id...
+// Bugreport was sent to kwes - so hopefully this can be changed in the future
+textarea.addEventListener('focusout', () => { 
+    errMsg = document.getElementById('field-error-message');
+    if(errMsg) {
+        errMsg.textContent = ""
+    }
+
+    setTimeout( function () {
+    errMsg = document.getElementById('field-error-message');
+    if(errMsg) {
+       errMsg.textContent = "Bitte geben Sie eine Nachricht ein.";
+    }
+    }, 500);
+
+    // In case the reaction of the kwes-js event handler was slow for some reason
+    setTimeout( function () {
+    errMsg = document.getElementById('field-error-message');
+    if(errMsg) {
+       errMsg.textContent = "Bitte geben Sie eine Nachricht ein.";
+    }
+    }, 1000);
+})
+
+// Function executed whenever the pages is (re)loaded
+function init() {
+    $("#contact-form")[0].reset();
+}
+
+init() // Run init script on page (re)load

@@ -7,10 +7,10 @@
 }
 
 .form-control.input {
-  border: 0;
+  border: none;
   background: transparent;
-  border-radius: 0px !important;
-  padding: .375rem .75rem;
+  padding: .375rem .5rem;
+  margin: 0 0.25rem;
   flex: 1;
 }
 
@@ -39,6 +39,21 @@
   width: 121px;
 }
 
+.form-group {
+  border-bottom: 1px solid silver;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0.1rem;
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  .form-group {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
 .cust-textarea {
   resize: both;
   line-height: 20px;
@@ -63,17 +78,6 @@ label {
   display: inline-block;
   margin-bottom: 0;
   flex: 0 1 auto;
-}
-
-.form-group {
-  border-bottom: 1px solid silver;
-  display: flex;
-  align-items: flex-end;
-}
-
-@media (max-width: 576px) {
-  .form-group {
-    flex-direction: column;
-  }
+  align-self: start;
 }
 

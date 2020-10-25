@@ -1,0 +1,16 @@
+.kw-border-success, .kw-border-error {
+  border: none !important;
+}
+
+.kw-field-error-message {
+  position: absolute;
+  bottom: -22px;
+  left: 0.75rem;
+}
+
+.col.text-center.pb-5 {
+}
+
+.form-control.input.cust-textarea {
+}
+
