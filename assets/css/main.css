@@ -554,3 +554,14 @@ html, body {
   font-size: 1rem;
 }
 
+@media (min-width: 576px) {
+  #quote-span::before {
+    content: '\A';
+    white-space: pre;
+  }
+}
+
+#zitat {
+  padding: 0 0.5rem;
+}
+
