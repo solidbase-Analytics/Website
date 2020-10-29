@@ -123,7 +123,7 @@
   width: 100%;
   position: fixed;
   background-color: rgba(0,0,0,0);
-  z-index: 3;
+  z-index: 15;
 }
 
 /* f-box is a custom version of feature box using flexbox to align heading and items vertically centered */
@@ -131,7 +131,7 @@
 .f-box {
   margin: 10px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding: 15px 20px;
 }
@@ -296,6 +296,10 @@ html, body {
 @media (min-width: 768px) {
   .slide-overlay {
     height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
   }
 }
 
@@ -312,6 +316,7 @@ html, body {
 
 .slide-overlay h4 {
   font-size: 1.2rem;
+  margin: 0;
 }
 
 #contact-btn {
@@ -559,6 +564,12 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 
 @media (min-width: 768px) {
+  #heading_and_btn h5 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
   #zitat h5 {
     font-size: 1.5rem;
   }
@@ -577,5 +588,26 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 #zitat {
   padding: 0 0.5rem;
+}
+
+.link-p {
+  margin: 0;
+  margin-left: 0.2rem;
+  font-size: 0.8rem;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.pic-link:hover {
+  color: rgb(33,37,41);
+}
+
+.pic-link {
+  color: rgb(33,37,41);
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 

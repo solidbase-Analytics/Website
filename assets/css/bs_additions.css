@@ -10,9 +10,3 @@
   margin-top: 10rem!important;
 }
 
-@media (min-width: 768px) {
-  #heading_and_btn h5 {
-    font-size: 1.5rem;
-  }
-}
-
