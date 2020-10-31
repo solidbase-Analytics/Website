@@ -61,7 +61,7 @@
   transition: all 1s ease-out;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .cust-textarea:focus {
     min-height: 200px !important;
     transition: all 1s ease-out;

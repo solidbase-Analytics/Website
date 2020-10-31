@@ -19,7 +19,7 @@ textarea.addEventListener('keyup', () => {
 // Equivalent to the css mediaquery which handles the resizing of the 
 // textarea for all screen bigger than 768 pixels
 // This distinction is due to the following bug https://github.com/LasseWolter/solidbase_Website/issues/22 
-if (screen.width < 768) {
+if (screen.width < 992) {
     textarea.onfocus = function() {
         // Smooth scrolling instead of abrupt focus on textarea
         scrollToElement(textarea);
