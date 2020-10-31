@@ -25,11 +25,6 @@ if (screen.width < 992) {
         scrollToElement(textarea);
         textarea.rows = parseInt(Math.max(lastNumberOfRows, 5))
     }
-    // When the use is done with the textarea shrink height to content
-    textarea.onfocusout = function() {
-        textarea.rows = lastNumberOfRows; 
-    }
-
     // Further we'd also like to apply to autoscrolling to name and email 
     // for a better user expirience on mobile
     const name_input = document.getElementById('name-input');
