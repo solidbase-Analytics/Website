@@ -22,19 +22,34 @@ textarea.addEventListener('keyup', () => {
 if (screen.width < 768) {
     textarea.onfocus = function() {
         // Smooth scrolling instead of abrupt focus on textarea
-        window.scrollTo({
-            // -110 to compensate for the navbar
-            top: getTotalTopOffset(textarea) - 110,
-            behavior: 'smooth'
-        });
+        scrollToElement(textarea);
         textarea.rows = parseInt(Math.max(lastNumberOfRows, 5))
     }
     // When the use is done with the textarea shrink height to content
     textarea.onfocusout = function() {
         textarea.rows = lastNumberOfRows; 
     }
+
+    // Further we'd also like to apply to autoscrolling to name and email 
+    // for a better user expirience on mobile
+    const name_input = document.getElementById('name-input');
+    const email_input = document.getElementById('email-input');
+    name_input.onfocus = function () {
+        scrollToElement(name_input);
+    }
+    email_input.onfocus = function () {
+        scrollToElement(email_input);
+    }
 }
 
+// Smooth scroll to the element passed to the function minus navbar compensation
+function scrollToElement(el) {
+    window.scrollTo({
+        // -110 to compensate for the navbar
+        top: getTotalTopOffset(el) - 110,
+        behavior: 'smooth'
+    });
+}
 
 // Idea taken from https://muffinman.io/javascript-get-element-offset/ 
 function getTotalTopOffset(el) {
