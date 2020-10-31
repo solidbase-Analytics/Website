@@ -57,12 +57,7 @@
 .cust-textarea {
   resize: both;
   line-height: 20px;
-  transition: all 1s ease-out;
   min-height: 20px;
-}
-
-.cust-textarea:focus {
-  min-height: 300px !important;
   transition: all 1s ease-out;
 }
 

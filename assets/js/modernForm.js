@@ -5,20 +5,50 @@
 */
 
 // Auto resize textarea to text
+let lastNumberOfRows = 0;
 const textarea = document.querySelector('.cust-textarea');
+// On each keyup we check if the rows got bigger than the current textarea
 textarea.addEventListener('keyup', () => {
-  textarea.style.height = calcHeight(textarea.value) + 'px';
+  // '+1' because one linebreak means 2 rows already
+  lastNumberOfRows = (textarea.value.match(/\n/g) || []).length + 1; 
+  if(lastNumberOfRows > textarea.rows) {
+    textarea.rows = lastNumberOfRows; 
+  }
 });
 
-// Dealing with Textarea Height
-// Get line height from css "-2" to cut off the "px"
-const lineHeight = parseInt(getComputedStyle(textarea).lineHeight.slice(0,-2));
-function calcHeight(value) {
-  let numberOfLineBreaks = (value.match(/\n/g) || []).length;
-  // lines x line-height + padding + border
-  // "+1" because first linebreak indicates 2 lines, etc.
-  let newHeight = (numberOfLineBreaks + 1) * lineHeight + 12 + 2;
-  return newHeight;
+// Equivalent to the css mediaquery which handles the resizing of the 
+// textarea for all screen bigger than 768 pixels
+// This distinction is due to the following bug https://github.com/LasseWolter/solidbase_Website/issues/22 
+if (screen.width < 768) {
+    textarea.onfocus = function() {
+        // Smooth scrolling instead of abrupt focus on textarea
+        window.scrollTo({
+            // -110 to compensate for the navbar
+            top: getTotalTopOffset(textarea) - 110,
+            behavior: 'smooth'
+        });
+        textarea.rows = parseInt(Math.max(lastNumberOfRows, 5))
+    }
+    // When the use is done with the textarea shrink height to content
+    textarea.onfocusout = function() {
+        textarea.rows = lastNumberOfRows; 
+    }
+}
+
+
+// Idea taken from https://muffinman.io/javascript-get-element-offset/ 
+function getTotalTopOffset(el) {
+  let top = 0;
+  let element = el;
+
+  // Loop through the DOM tree
+  // and add it's parent's offset to get page offset
+  do {
+    top += element.offsetTop || 0;
+    element = element.offsetParent;
+  } while (element);
+
+  return top;
 }
 
 // Very poor implementation but atm I don't have any other idea how 
@@ -48,6 +78,7 @@ textarea.addEventListener('focusout', () => {
     }
     }, 1000);
 })
+
 
 // Function executed whenever the pages is (re)loaded
 function init() {
