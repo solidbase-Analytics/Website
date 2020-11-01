@@ -15,18 +15,13 @@
   color: rgb(25,120,126) !important;
 }
 
-@media (max-width: 991px) {
-  .kw-alert-success {
-    position: fixed;
-    bottom: 0px;
-    width: 80% !important;
-    right: 10%;
-    left: 10%;
-    opacity: 1 !important;
-    z-index: 10;
-  }
-}
-
-#msg-ta {
+.kw-alert-success {
+  position: fixed;
+  bottom: 0px;
+  width: 80% !important;
+  right: 10%;
+  left: 10%;
+  opacity: 1 !important;
+  z-index: 10;
 }
 
