@@ -49,7 +49,20 @@
                 <div class="block-heading mt-5">
                     <h2 class="text-info blue5blue">Kontakt</h2>
                     <h4>Wie können wir helfen?</h4>
-                    <p>Sie haben Fragen zu unseren Leistungen.&nbsp;Kontaktieren Sie uns gerne, wir melden uns schnellstmöglich zurück.</p>
+                    <p>Sie haben Fragen zu unseren Leistungen.&nbsp;Kontaktieren Sie uns gerne, indem Sie das folgende Formular ausfüllen oder uns direkt eine E-Mail an <span class="avoidbreak"><a id="email-link" href="mailto:info@solidbase-analytics.com">info@solidbase-analytics.com</a></span>&nbsp;senden.&nbsp;
+                        Wir melden uns schnellstmöglich zurück.</p>
+                    <div class="modal fade" role="dialog" tabindex="-1" id="email-modal">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body d-flex flex-column"><span class="spinner-border mx-auto" role="status"></span>
+                                    <p class="pt-3">Wir versuchen Ihr E-Mail-Programm zu öffnen....<br>Wenn dies nicht funktioniert, klicken Sie einfach auf die die folgende Addresse <span id="copy-span" class="avoidbreak" onclick="document.execCommand(&quot;copy&quot;)" data-placement="top" data-content="Addresse kopiert"
+                                            data-trigger="focus" tabindex="0"><span style="text-decoration: underline;">info@solidbase-analytics.com</span></span>, um sie zu kopieren.</p>
+                                    <h1></h1>
+                                </div>
+                                <div class="modal-footer"><button class="btn btn-blue5blue" type="button" data-dismiss="modal">Schließen</button></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <form id="contact-form" class="kwes-form" method="POST" action="https://kwes.io/api/foreign/forms/2pAuxwoMWtkvq6nDdj4J" lang="de">

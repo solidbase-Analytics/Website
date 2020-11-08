@@ -1,17 +1,6 @@
 const navbar = document.getElementById('navbar');
 let lastScrollY = window.scrollY; // as reference value to check if scrolling up or down
 
-// Lets you scroll to the part of the page where element with this id is located
-function scrollToId(idString) {
-    let target = document.querySelector('#' + idString).offsetTop;
-    scroll({
-        top: target,
-        behavior: 'smooth'
-    });
-    // Don't remove navbar during automatic scrolling (pause scrollDisappear for 1sec)
-    window.onscroll = null; // remove existing listener
-    setTimeout(() => window.onscroll = scrollDisappear, 1000);
-}
 
 // Make navbar automatically appear/disappear corresponding to scrolling
 window.onscroll = scrollDisappear;
@@ -33,6 +22,7 @@ function scrollDisappear() {
     lastScrollY = window.scrollY; // save Y-scroll for future comparisions
 }
 
+
 // Display navbar when users hovers over very top part of visible page
 document.getElementById('navbar-overlay').onmouseover = () => {
     navbar.classList.remove('nav-hidden');
@@ -40,14 +30,58 @@ document.getElementById('navbar-overlay').onmouseover = () => {
 
 //--------------------------------------------------
 // Buttons and their behaviour
-let learnMoreButton = document.getElementById('learnMoreBtn');
-learnMoreButton.onclick = function () {
-    // Scroll to the info section by scrolling the corresponding offset
-    scrollToId('sec-info');
+let learnMoreButton = document.getElementById('learnMoreBtn')
+if (learnMoreButton) {
+    learnMoreButton.onclick = function () {
+        // Scroll to the info section by scrolling the corresponding offset
+        scrollToId('sec-info');
+    }
 }
 
 let btnUseCases = document.getElementById('btnUseCases');
-btnUseCases.onclick = scrollToId.bind(this, 'use-cases');
+if (btnUseCases) {
+    btnUseCases.onclick = scrollToId.bind(this, 'use-cases');
+}
 
 let btnOurServices = document.getElementById('btnOurServices');
-btnOurServices.onclick = scrollToId.bind(this, 'sec-services');
+if (btnOurServices) {
+    btnOurServices.onclick = scrollToId.bind(this, 'sec-services');
+}
+
+
+//--------------------------------------------------
+// CONTACT PAGE
+// Trigger a copy to clipboard action when clicked on this span
+let copySpan = document.getElementById('copy-span');
+if (copySpan) {
+    copySpan.onclick = () => {
+        document.execCommand("copy");
+        $('#copy-span').popover('show');
+    }
+    copySpan.addEventListener("copy", function (event) {
+        event.preventDefault();
+        if (event.clipboardData) {
+            event.clipboardData.setData("text/plain", "info@solidbase-analytics.com");
+        }
+    })
+}
+
+// Info Modal when clicked on email to tell that a program will open
+document.getElementById('email-link').onclick = function () {
+    $("#email-modal").modal('show');
+}
+
+
+//--------------------------------------------------
+// Utility functions 
+// Lets you scroll to the part of the page where element with this id is located
+function scrollToId(idString) {
+    let target = document.querySelector('#' + idString).offsetTop;
+    scroll({
+        top: target,
+        behavior: 'smooth'
+    });
+    // Don't remove navbar during automatic scrolling (pause scrollDisappear for 1sec)
+    window.onscroll = null; // remove existing listener
+    setTimeout(() => window.onscroll = scrollDisappear, 1000);
+}

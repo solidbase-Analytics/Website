@@ -611,3 +611,33 @@ p, h1, h2, h3, h4, h5, h6, li {
   cursor: pointer;
 }
 
+.copy-span {
+}
+
+.copy-span:hover {
+}
+
+#copy-span {
+  cursor: pointer;
+  color: #008a7c;
+}
+
+#copy-span:hover {
+  color: #006259;
+}
+
+a {
+  color: #006a60;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #00443d;
+  text-decoration: underline;
+}
+
+span.avoidbreak {
+  display: inline-block;
+}
+
