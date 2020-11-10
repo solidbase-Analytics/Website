@@ -25,7 +25,7 @@ function mobileAndTabletCheck() {
 
 // Detecting if someone is using a mobile or a tablet to make form behave differently
 // This distinction is due to the following bug https://github.com/LasseWolter/solidbase_Website/issues/22 
-if (mobileAndTabletCheck) {
+if (mobileAndTabletCheck()) {
     textarea.onfocus = function() {
         // Smooth scrolling instead of abrupt focus on textarea
         scrollToElement(textarea);
