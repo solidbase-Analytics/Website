@@ -69,6 +69,9 @@ if (copySpan) {
 // Info Modal when clicked on email to tell that a program will open
 document.getElementById('email-link').onclick = function () {
     $("#email-modal").modal('show');
+    setTimeout(function() {
+        $("#email-modal").modal('hide');
+    }, 30000);
 }
 
 
