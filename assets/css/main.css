@@ -641,3 +641,9 @@ span.avoidbreak {
   display: inline-block;
 }
 
+.person-card img:hover {
+  transform: scale(1.15);
+  transition: transform 0.25s;
+  cursor: pointer;
+}
+
