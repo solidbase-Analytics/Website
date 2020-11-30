@@ -650,3 +650,34 @@ span.avoidbreak {
   font-size: 35px;
 }
 
+#modal-blankpic a:hover {
+  font-weight: bold;
+}
+
+#modal-blankpic a {
+  color: black;
+  font-weight: bold;
+}
+
+.btn-blankpic {
+  background: #454d55;
+}
+
+.btn-blankpic:hover {
+  color: white;
+  background: black;
+}
+
+.btn-blankpic i {
+  font-size: 15px;
+}
+
+.btn-light-cust {
+  background: #c3c9cf;
+  border: none;
+}
+
+.btn-light-cust:hover {
+  background: #dae0e5;
+}
+

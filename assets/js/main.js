@@ -77,6 +77,15 @@ document.getElementById('email-link').onclick = function () {
 
 //--------------------------------------------------
 // Utility functions 
+
+
+
+// taken from https://stackoverflow.com/questions/4907843/open-a-url-in-a-new-tab-and-not-a-new-window
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
 // Lets you scroll to the part of the page where element with this id is located
 function scrollToId(idString) {
     let target = document.querySelector('#' + idString).offsetTop;
