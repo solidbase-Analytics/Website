@@ -95,6 +95,28 @@ textarea.addEventListener('focusout', () => {
     }, 1000);
 })
 
+// Info Modal is opened on click on email address and auto-closed after 30s
+document.getElementById('email-link').onclick = function () {
+    $("#email-modal").modal('show');
+    setTimeout(function() {
+        $("#email-modal").modal('hide');
+    }, 30000);
+}
+
+// Trigger a copy to clipboard action when clicked on this span
+let copySpan = document.getElementById('copy-span');
+if (copySpan) {
+    copySpan.onclick = () => {
+        document.execCommand("copy");
+        $('#copy-span').popover('show');
+    }
+    copySpan.addEventListener("copy", function (event) {
+        event.preventDefault();
+        if (event.clipboardData) {
+            event.clipboardData.setData("text/plain", copySpan.innerHTML);
+        }
+    })
+}
 
 // Function executed whenever the pages is (re)loaded
 function init() {

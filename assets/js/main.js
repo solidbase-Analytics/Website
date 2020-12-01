@@ -48,33 +48,6 @@ if (btnOurServices) {
     btnOurServices.onclick = scrollToId.bind(this, 'sec-services');
 }
 
-
-//--------------------------------------------------
-// CONTACT PAGE
-// Trigger a copy to clipboard action when clicked on this span
-let copySpan = document.getElementById('copy-span');
-if (copySpan) {
-    copySpan.onclick = () => {
-        document.execCommand("copy");
-        $('#copy-span').popover('show');
-    }
-    copySpan.addEventListener("copy", function (event) {
-        event.preventDefault();
-        if (event.clipboardData) {
-            event.clipboardData.setData("text/plain", "info@solidbase-analytics.com");
-        }
-    })
-}
-
-// Info Modal when clicked on email to tell that a program will open
-document.getElementById('email-link').onclick = function () {
-    $("#email-modal").modal('show');
-    setTimeout(function() {
-        $("#email-modal").modal('hide');
-    }, 30000);
-}
-
-
 //--------------------------------------------------
 // Utility functions 
 
