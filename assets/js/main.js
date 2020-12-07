@@ -12,14 +12,17 @@ function scrollDisappear() {
     }
 
     // The navbar shouldn't disappear before the info-section has been reached
+    let navbarHeight = 100;
+    // We compensate for the navbar height. Thus, the navbar disappears 
+    // when the bottom of the navbar hits the info section
     let offsetTop = document.querySelector('#sec-info').offsetTop;
-    if (window.scrollY > lastScrollY && window.scrollY >= offsetTop - 100) {
+    if (window.scrollY > lastScrollY && window.scrollY >= offsetTop - navbarHeight) {
         navbar.classList.add('nav-hidden');
     }
     else {
         navbar.classList.remove('nav-hidden');
     };
-    lastScrollY = window.scrollY; // save Y-scroll for future comparisions
+    lastScrollY = window.scrollY; // save Y-scroll for future comparisons
 }
 
 
