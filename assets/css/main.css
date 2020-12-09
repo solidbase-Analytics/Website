@@ -501,6 +501,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   background: url("../../assets/img/backgrounds/long_page_sm.png");
   background-size: 100%;
   background-repeat: no-repeat;
+  min-height: 70vh;
 }
 
 @media (min-width: 768px) {
