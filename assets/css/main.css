@@ -685,3 +685,11 @@ span.avoidbreak {
   opacity: 0.8;
 }
 
+#ml-box {
+  width: 85%;
+}
+
+#ml-box p {
+  max-width: 90%;
+}
+
