@@ -126,6 +126,10 @@
   z-index: 15;
 }
 
+.clean-navbar .navbar-nav .nav-item {
+  padding-right: 1.3rem;
+}
+
 /* f-box is a custom version of feature box using flexbox to align heading and items vertically centered */
 
 .f-box {
@@ -318,12 +322,12 @@ html, body {
   margin: 0;
 }
 
-#contact-btn {
+.contact-btn {
   padding-left: 70px;
   text-align: left;
 }
 
-#contact-btn:hover {
+.contact-btn:hover {
   color: white;
 }
 
@@ -691,5 +695,45 @@ span.avoidbreak {
 
 #ml-box p {
   max-width: 90%;
+}
+
+/* OFFICE ANALYTICS PAGE */
+
+.overlay-div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  transition: background ease-in-out 0.4s;
+  transition: visibility ease-in-out 0.1s;
+  background: rgba(0,0,0,0.3);
+  color: white;
+}
+
+.wrapper-div {
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  #btn-right {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  #btn-left {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  #oa-box p {
+    text-align: center;
+  }
 }
 
